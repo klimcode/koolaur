@@ -1,0 +1,64 @@
+.Menu__btn {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  padding: 8px;
+  width: 64px;
+
+  cursor: default;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+}
+.Menu__btnIcon {
+  position: relative;
+  top: -2px;
+  height: 60%;
+  width: 100%;
+  color: #aaa;
+  opacity: .5;
+}
+
+.Menu__btnIcon b,
+.Menu__btnIcon:before,
+.Menu__btnIcon:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: currentColor;
+  border-radius: 4px;
+  opacity: 1;
+
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.Menu__btnIcon:before { top: 0; }
+.Menu__btnIcon b { top: 50%; }
+.Menu__btnIcon:after { top: 100%; }
+
+.Menu__btn.open {
+  cursor: pointer;
+}
+.open > .Menu__btnIcon {
+  color: #268;
+  opacity: 1;
+}
+.open > .Menu__btnIcon:before {
+  top: 50%;
+  transform: rotate(135deg);
+}
+.open > .Menu__btnIcon b {
+  opacity: 0;
+  left: -60px;
+}
+.open > .Menu__btnIcon:after {
+  top: 50%;
+  transform: rotate(-135deg);
+}
