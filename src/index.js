@@ -2,17 +2,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { HashRouter, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-import App from './components/App';
+import App from './commonBundle/App';
+import theme from './css/theme';
 import './css/critical.css';
 // lazy loading
 import('./css/rest.css');
 
 
 ReactDOM.render(
-  <HashRouter>
-    <Route psth="/" component={App} />
-  </HashRouter>,
+  <ThemeProvider theme={theme}>
+    <HashRouter>
+      <Route path="/" component={App} />
+    </HashRouter>
+  </ThemeProvider>,
   document.getElementById('root'),
 );
 

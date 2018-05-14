@@ -10,13 +10,11 @@ import { Preview } from './Preview';
 import { PageMain } from './pages/PageMain';
 import { PageRhytm } from './pages/PageRhytm';
 import { PageSplitHeader } from './pages/PageSplitHeader';
-import { BrokenBoarder } from './pages/BrokenBoarder';
 
 
 const pages = [
   { name: 'Vertical Rhytm', path: '/rhytm', comp: PageRhytm },
   { name: 'Split Header', path: '/split-header', comp: PageSplitHeader },
-  { name: 'Broken Boarder', path: '/broken-boarder', comp: BrokenBoarder },
 ];
 
 const GoBackBtn = props => (
