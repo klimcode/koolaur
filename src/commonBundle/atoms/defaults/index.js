@@ -1,5 +1,5 @@
 export const media = {
-  sm: '541px',
-  md: '976px',
-  lg: '1370px',
+  sm: '541',
+  md: '976',
+  lg: '1370',
 };

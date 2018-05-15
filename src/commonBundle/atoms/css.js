@@ -1,14 +1,24 @@
 import { css } from 'styled-components';
 import getBaselineStyles from './baseline';
-import { media } from './defaults';
+import { media as mediaDef } from './defaults';
 
+
+const getMedia = minmax => size => (props) => {
+  const themeMedia = props.theme && props.theme.media && props.theme.media[size];
+  return `(${minmax}-width: ${(themeMedia || mediaDef[size]) - 1}px)`;
+};
+export const minSm = getMedia('min')('sm');
+export const maxSm = getMedia('max')('sm');
+export const minMd = getMedia('min')('md');
+export const maxMd = getMedia('max')('md');
+export const minLg = getMedia('min')('lg');
 const cssHiddenMd = css`
-  @media (min-width: ${p => (p.theme.media && p.theme.media.md) || media.md}) {
+  @media ${minMd} {
     display: none;
   }
 `;
 const cssHiddenLg = css`
-  @media (min-width: ${p => (p.theme.media && p.theme.media.lg) || media.lg}) {
+  @media ${minLg} {
     display: none;
   }
 `;
@@ -32,12 +42,10 @@ export const fnHideMinScreen = threshold => css`
     display: none;
   }
 `;
-export const fnInlineGapDesktop = gap => css`
-  @media (min-width: ${p => p.theme.screenLarge}) {
-    margin-left: ${gap || 16}px;
+export const fnInlineGap = gap => css`
+  margin-left: ${gap || 16}px;
 
-    &:first-child {
-      margin-left: 0;
-    }
+  &:first-child {
+    margin-left: 0;
   }
 `;

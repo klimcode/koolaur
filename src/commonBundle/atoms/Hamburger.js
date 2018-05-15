@@ -14,7 +14,7 @@ const BtnWrap = styled.div`
   padding: 8px;
   width: 64px;
 
-  cursor: ${props => props.isPressed ? 'pointer' : 'default'};
+  cursor: pointer;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
 
@@ -80,14 +80,15 @@ export default class Btn extends React.Component {
     return false;
   }
 
-  clickHandler = e => (
-    (typeof this.props.onClick === 'function') && this.props.onClick(this.props, e)
-  );
+  // clickHandler = (e) => {
+  //   // console.log(this.props);
+  //   return (typeof this.props.onClick === 'function') && this.props.onClick(this.props, e);
+  // };
 
   render() {
     return (
-      <BtnWrap onClick={this.clickHandler} {...this.props}>
-        <Icon {...this.props}>
+      <BtnWrap {...this.props} onClick={this.props.click} >
+        <Icon isPressed={this.props.isPressed} >
           <b />
         </Icon>
       </BtnWrap>

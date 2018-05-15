@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { media } from '../atoms/defaults';
 
 const Layout = styled.div`
   display: flex;
@@ -9,7 +10,7 @@ const Layout = styled.div`
 `;
 const Container = styled.div`
   margin: auto;
-  max-width: ${p => p.theme.screenLarge || '768px'};
+  max-width: ${media.md}px;
 `;
 const HeaderStyled = styled.div`
   padding: 16px 0;

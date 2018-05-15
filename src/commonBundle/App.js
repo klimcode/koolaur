@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 import { H1 } from './atoms/H';
 import { Flex } from './atoms/Flex';
 import { Logo } from './atoms';
-import { Layout, Header, Body, Footer } from './molecules/layout';
+import { Layout, Header, Body, Footer } from './molecules/Layout';
 import { Menu } from './molecules/Menu';
 
 
@@ -14,12 +14,12 @@ const pages = [
   { name: 'About', path: '/about' },
 ];
 
-export default props => (
+export default () => (
   <Layout>
     <Header>
       <Flex>
         <Logo />
-        <Menu pages={pages} isInnerPage={props.location.pathname !== '/'} />
+        <Menu pages={pages} />
       </Flex>
     </Header>
     <Body>
