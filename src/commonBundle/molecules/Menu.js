@@ -20,7 +20,7 @@ const cssMenuOpened = css`
   left: 0;
   right: 0;
   top: 0;
-  padding: 128px 0 64px;
+  padding-top: 64px;
 
   text-align: center;
   background: #eee;
@@ -28,10 +28,17 @@ const cssMenuOpened = css`
 const MenuContent = styled.div`
   @media ${maxMd} {
     ${p => p.isOpened ? cssMenuOpened : 'display:none'}
+
+    & > div {
+      height: 100%;
+      overflow: auto;
+    }
   }
   @media ${minMd} {
-    display: flex;
-    flex-direction: column;
+    & > div {
+      display: flex;
+      flex-direction: column;
+    }
   }
 `;
 const List = styled.div`
@@ -86,20 +93,23 @@ export class Menu extends React.Component {
   }
 
   render() {
+    const linkClick = () => {}////////////////////////
     return (
       <React.Fragment>
         <Hamburger hidden_md isPressed={this.state.isOpened} click={this.handleClick} />
         <MenuContent isOpened={this.state.isOpened}>
-          <List>
-            {this.props.pages.map((page, i) => (
-              <MenuLink to={page.path} key={i}>{page.name}</MenuLink>
-            ))}
-          </List>
-          <Socials>
-            <SocialLink to="/"><IconInstagram /></SocialLink>
-            <SocialLink to="/"><IconFacebook /></SocialLink>
-            <SocialLink to="/"><IconBehance /></SocialLink>
-          </Socials>
+          <div>
+            <List>
+              {this.props.pages.map((page, i) => (
+                <MenuLink to={page.path} key={i} onClick={linkClick}>{page.name}</MenuLink>
+              ))}
+            </List>
+            <Socials>
+              <SocialLink to="/"><IconInstagram /></SocialLink>
+              <SocialLink to="/"><IconFacebook /></SocialLink>
+              <SocialLink to="/"><IconBehance /></SocialLink>
+            </Socials>
+          </div>
         </MenuContent>
       </React.Fragment>
     );
