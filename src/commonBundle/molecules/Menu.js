@@ -1,18 +1,15 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { cssBaseline } from 'react-sc-atoms-set';
+import {
+  cssBaseline,
+  cssColorPrimary,
+  fnInlineGapDesktop,
+} from '../atoms/css';
 
-import { Hamburger } from '../atoms';
+import Hamburger from '../atoms/Hamburger';
+import { IconFacebook, IconInstagram, IconBehance } from '../atoms/icons';
 
-const inlineGap = gap => css`
-  @media (min-width: ${p => p.theme.screenLarge}) {
-    margin-left: ${gap || 16}px;
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }`;
 
 const MenuContent = styled.div`
   display: flex;
@@ -27,34 +24,35 @@ const Socials = styled.div`
 
   @media (min-width: ${p => p.theme.screenLarge}) {
     text-align: right;
+    padding: 16px 0;
   }
 `;
 const MenuLink = styled(Link)`
   display: block;
   color: blue;
   text-transform: uppercase;
+  text-decoration: none;
 
+  ${cssColorPrimary}
   ${cssBaseline}
-  ${inlineGap(16)}
+  ${fnInlineGapDesktop(16)}
 `;
 const SocialLink = styled(Link)`
-  display: block;
-  color: red;
+  display: inline-block;
+  height: 32px;
 
-  ${cssBaseline}
-  ${inlineGap(16)}
+  ${cssColorPrimary}
+  ${fnInlineGapDesktop(16)}
 `;
-SocialLink.defaultProps = {
-  component: 'socialLink',
-};
 
-export default class Menu extends React.Component {
+
+export class Menu extends React.Component {
   isOpened = false;
 
   render() {
     return (
       <React.Fragment>
-        <Hamburger isPressed={this.props.isInnerPage} />
+        <Hamburger hidden_lg isPressed={this.props.isInnerPage} />
         <MenuContent>
           <List>
             {this.props.pages.map((page, i) => (
@@ -62,7 +60,9 @@ export default class Menu extends React.Component {
             ))}
           </List>
           <Socials>
-            <SocialLink to="/">Instagram</SocialLink>
+            <SocialLink to="/"><IconInstagram /></SocialLink>
+            <SocialLink to="/"><IconFacebook /></SocialLink>
+            <SocialLink to="/"><IconBehance /></SocialLink>
           </Socials>
         </MenuContent>
       </React.Fragment>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export default styled.div`
+export const Flex = styled.div`
   display: flex;
   justify-content: space-between;
 `;

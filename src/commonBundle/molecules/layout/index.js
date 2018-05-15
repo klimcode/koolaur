@@ -9,7 +9,7 @@ const Layout = styled.div`
 `;
 const Container = styled.div`
   margin: auto;
-  max-width: 768px;
+  max-width: ${p => p.theme.screenLarge || '768px'};
 `;
 const HeaderStyled = styled.div`
   padding: 16px 0;

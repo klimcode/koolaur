@@ -4,5 +4,5 @@ import src from './logo-koolaur.svg';
 
 
 export default styled.img.attrs({ src })`
-  height: 96px;
+  height: 80px;
 `;

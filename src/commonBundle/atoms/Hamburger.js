@@ -1,5 +1,7 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { cssMedia } from './css';
+
 
 const BtnWrap = styled.div`
   position: fixed;
@@ -16,11 +18,24 @@ const BtnWrap = styled.div`
   transform: rotate(0deg);
   transition: .5s ease-in-out;
 
-  @media (min-width: 768px) {
-    display: none;
-  }
+  ${cssMedia}
 `;
 
+
+const cssIconPressed = css`
+  &:before {
+    top: 50%;
+    transform: rotate(135deg);
+  }
+  & b {
+    opacity: 0;
+    left: -60px;
+  }
+  &:after {
+    top: 50%;
+    transform: rotate(-135deg);
+  }
+`;
 const Icon = styled.div`
   position: relative;
   top: -2px;
@@ -54,20 +69,7 @@ const Icon = styled.div`
   & b { top: 50%; }
   &:after { top: 100%; }
 
-  ${props => props.isPressed && `
-    &:before {
-      top: 50%;
-      transform: rotate(135deg);
-    }
-    & b {
-      opacity: 0;
-      left: -60px;
-    }
-    &:after {
-      top: 50%;
-      transform: rotate(-135deg);
-    }
-  `}
+  ${props => props.isPressed && cssIconPressed}
 `;
 
 export default class Btn extends React.Component {
@@ -83,10 +85,9 @@ export default class Btn extends React.Component {
   );
 
   render() {
-    const { isPressed } = this.props;
     return (
-      <BtnWrap isPressed={isPressed} onClick={this.clickHandler}>
-        <Icon isPressed={isPressed}>
+      <BtnWrap onClick={this.clickHandler} {...this.props}>
+        <Icon {...this.props}>
           <b />
         </Icon>
       </BtnWrap>

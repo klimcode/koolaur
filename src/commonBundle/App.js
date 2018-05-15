@@ -1,10 +1,11 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 
-import { H1 } from 'react-sc-atoms-set';
-import { Layout, Header, Body, Footer } from './layout';
-import { Logo, Flex } from './atoms';
-import { Menu } from './molecules';
+import { H1 } from './atoms/H';
+import { Flex } from './atoms/Flex';
+import { Logo } from './atoms';
+import { Layout, Header, Body, Footer } from './molecules/layout';
+import { Menu } from './molecules/Menu';
 
 
 const pages = [
