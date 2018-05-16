@@ -1,13 +1,8 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { cssMedia } from './css';
 
 
 const BtnWrap = styled.div`
-  position: fixed;
-  top: 0;
-  right: 0;
-  z-index: 99;
   display: flex;
   align-items: center;
   height: 64px;
@@ -17,8 +12,6 @@ const BtnWrap = styled.div`
   cursor: pointer;
   transform: rotate(0deg);
   transition: .5s ease-in-out;
-
-  ${cssMedia}
 `;
 
 

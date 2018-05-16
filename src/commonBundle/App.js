@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import styled from 'styled-components';
 
 import { H1 } from './atoms/H';
 import { Flex } from './atoms/Flex';
@@ -14,13 +15,26 @@ const pages = [
   { name: 'About', path: '/about' },
 ];
 
+const FlexStyled = styled(Flex)`
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #888;
+  }
+`;
+
 export default () => (
   <Layout>
     <Header>
-      <Flex>
+      <FlexStyled>
         <Logo />
         <Menu pages={pages} />
-      </Flex>
+      </FlexStyled>
     </Header>
     <Body>
       <H1 gap>Koolaur</H1>

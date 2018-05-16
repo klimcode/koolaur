@@ -13,7 +13,7 @@ const Container = styled.div`
   max-width: ${media.md}px;
 `;
 const HeaderStyled = styled.div`
-  padding: 16px 0;
+  padding-top: 16px;
 `;
 const BodyStyled = styled.div`
   /* display: flex; */

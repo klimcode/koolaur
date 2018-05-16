@@ -1,7 +1,7 @@
 /* eslint-env browser */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import App from './commonBundle/App';
@@ -13,9 +13,9 @@ import('./css/rest.css');
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
-    <HashRouter>
+    <BrowserRouter>
       <Route path="/" component={App} />
-    </HashRouter>
+    </BrowserRouter>
   </ThemeProvider>,
   document.getElementById('root'),
 );

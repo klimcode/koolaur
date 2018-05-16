@@ -1,33 +1,45 @@
 import { css } from 'styled-components';
 import getBaselineStyles from './baseline';
 import { media as mediaDef } from './defaults';
+import swtch from 'brief-switch';
 
 
-const getMedia = minmax => size => (props) => {
+const getMediaBreakpoint = minmax => size => (props) => {
   const themeMedia = props.theme && props.theme.media && props.theme.media[size];
   return `(${minmax}-width: ${(themeMedia || mediaDef[size]) - 1}px)`;
 };
-export const minSm = getMedia('min')('sm');
-export const maxSm = getMedia('max')('sm');
-export const minMd = getMedia('min')('md');
-export const maxMd = getMedia('max')('md');
-export const minLg = getMedia('min')('lg');
-const cssHiddenMd = css`
-  @media ${minMd} {
-    display: none;
-  }
-`;
-const cssHiddenLg = css`
-  @media ${minLg} {
-    display: none;
-  }
-`;
-export const cssMedia = css`
+export const minSm = getMediaBreakpoint('min')('sm');
+export const maxSm = getMediaBreakpoint('max')('sm');
+export const minMd = getMediaBreakpoint('min')('md');
+export const maxMd = getMediaBreakpoint('max')('md');
+export const minLg = getMediaBreakpoint('min')('lg');
+export const maxLg = getMediaBreakpoint('max')('lg');
+const cssHideLg = css`@media ${minLg} {display: none;}`;
+const cssHideMd = css`@media ${minMd} {display: none;}`;
+const cssHideSm = css`@media ${minSm} {display: none;}`;
+const cssHideMaxLg = css`@media ${maxLg} {display: none;}`;
+const cssHideMaxMd = css`@media ${maxMd} {display: none;}`;
+const cssHideMaxSm = css`@media ${maxSm} {display: none;}`;
+export const cssHideByProps = css`
   ${p =>
-    (p.hidden_lg && cssHiddenLg) ||
-    (p.hidden_md && cssHiddenMd)
+    (p.hide_lg && cssHideLg) ||
+    (p.hide_md && cssHideMd) ||
+    (p.hide_sm && cssHideSm) ||
+    (p.hide_max_sm && cssHideMaxSm) ||
+    (p.hide_max_md && cssHideMaxMd) ||
+    (p.hide_max_lg && cssHideMaxLg)
 }
 `;
+export const fnHide = size => (
+  swtch(size, [
+    'lg', cssHideLg,
+    'md', cssHideMd,
+    'sm', cssHideSm,
+    'max_lg', cssHideMaxLg,
+    'max_md', cssHideMaxMd,
+    'max_sm', cssHideMaxSm,
+  ])
+);
 
 export const cssColorPrimary = css`
   color: ${p => p.theme.color || '#000000'};
