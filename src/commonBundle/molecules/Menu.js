@@ -89,8 +89,8 @@ const SocialLink = styled(Link).attrs({ target: '_blank' })`
 
 const MenuBtnWrapper = styled.div`
   position: fixed;
-  top: 0;
-  right: 0;
+  top: 8px;
+  right: 8px;
   z-index: 100;
 
   ${fnHide('md')}

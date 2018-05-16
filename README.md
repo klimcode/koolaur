@@ -1,27 +1,11 @@
-# __Name
+# Koolaur
 
 ![this project is under construction](https://klimcode.github.io/base/construction.png)
 
-__Description
+A portfolio-website for an Illustrator.
 
-## Installation
+## Tech Stack
 
-```bash
-npm i -S __npm__registry__name__
-```
-
-or
-
-```bash
-yarn add __npm__registry__name__
-```
-
-## Example
-
-```js
-// code
-```
-
-## Explanation
-
-Explanation
+React + React Router v.4
+Styled Components
+Atomic Design

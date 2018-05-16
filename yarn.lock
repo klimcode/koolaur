@@ -1225,9 +1225,9 @@ braces@^2.3.0, braces@^2.3.1:
     split-string "^3.0.2"
     to-regex "^3.0.1"
 
-brief-switch@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/brief-switch/-/brief-switch-0.1.0.tgz#8ed43b40f256575892a9a113d0c02d2e95935b31"
+brief-switch@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/brief-switch/-/brief-switch-0.2.0.tgz#2e161e56f6ecc1fe3152bd022d13622e622c5d75"
 
 brorand@^1.0.1:
   version "1.1.0"

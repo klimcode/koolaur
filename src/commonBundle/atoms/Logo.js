@@ -4,7 +4,7 @@ import src from './logo-koolaur.svg';
 import { maxMd } from '../atoms/css';
 
 
-export default styled.img.attrs({ src })`
+export const Logo = styled.img.attrs({ src })`
   height: 80px;
 
   @media ${maxMd} {

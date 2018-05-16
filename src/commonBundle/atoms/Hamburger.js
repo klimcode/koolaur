@@ -5,9 +5,9 @@ import styled, { css } from 'styled-components';
 const BtnWrap = styled.div`
   display: flex;
   align-items: center;
-  height: 64px;
+  height: 48px;
+  width: 48px;
   padding: 8px;
-  width: 64px;
 
   cursor: pointer;
   transform: rotate(0deg);
@@ -34,10 +34,10 @@ const Icon = styled.div`
   top: -2px;
   height: 60%;
   width: 100%;
-  color: #aaa;
+  color: #333;
   opacity: .5;
   ${props => props.isPressed && `
-    color: #268;
+    color: #e08;
     opacity: 1;
   `}
 
@@ -48,7 +48,7 @@ const Icon = styled.div`
     position: absolute;
     left: 0;
     display: block;
-    height: 3px;
+    height: 2px;
     width: 100%;
     background: currentColor;
     border-radius: 4px;

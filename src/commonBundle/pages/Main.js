@@ -1,17 +1,24 @@
 import React from 'react';
-import styled from 'styled-components';
+// import styled from 'styled-components';
+import Gallery from '../templates/Gallery';
 
-const Page = styled.div`
-  height: 100%;
-  background: red;
-`;
-const ProjectView = styled.div``;
-const ProjectsList = styled.div``;
+// Crashes old mobile Safari !!!
+const images = require.context('../../../public/static/media', false, /\.(jpe?g|png)$/).keys();
 
-export default () => (
-  <Page>
-    lalala
-    <ProjectView />
-    <ProjectsList />
-  </Page>
+
+const projects = images
+  .filter(item => item.includes('-min'))
+  .map((item) => {
+    const fileName = item.slice(2);
+    const thumbSrc = `/static/media/${fileName}`;
+    const imgSrc = thumbSrc.replace('-min', '');
+    const url = fileName.replace(/\..*/, '').replace('-min', '');
+    const name = url.replace('-', ' ');
+    return {
+      name, thumbSrc, imgSrc, url: `/${url}`,
+    };
+  });
+
+export default props => (
+  <Gallery {...props} items={projects} />
 );

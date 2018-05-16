@@ -21,10 +21,6 @@ html {
 body {
   margin: 0;
 }
-a {
-  background-color: transparent;
-  -webkit-text-decoration-skip: objects;
-}
 ::-moz-selection {
   text-shadow: none;
 }

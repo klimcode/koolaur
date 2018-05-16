@@ -1,10 +1,10 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, Redirect, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Layout, Header, Body, Footer } from './atoms/Layout';
 import { Flex } from './atoms/Flex';
-import { Logo } from './atoms';
+import { Logo } from './atoms/Logo';
 import { Menu } from './molecules/Menu';
 import PageMain from './pages/Main';
 import PageSketches from './pages/Sketches';
@@ -13,7 +13,7 @@ import PageAbout from './pages/About';
 
 const pages = [
   {
-    name: 'Illustration', path: '/', exact: true, comp: PageMain,
+    name: 'Illustration', path: '/illustration', exact: true, comp: PageMain,
   },
   { name: 'Sketches', path: '/sketches', comp: PageSketches },
   { name: 'About', path: '/about', comp: PageAbout },
@@ -41,9 +41,13 @@ export default () => (
       </FlexStyled>
     </Header>
     <Body>
-      {pages.map((p, i) => (
-        <Route path={p.path} exact={p.exact} component={p.comp} key={i} />
-      ))}
+      <Switch>
+        {pages.map((p, i) => (
+          <Route path={p.path} exact={p.exact} component={p.comp} key={i} />
+        ))}
+        <Route path="/:isProjectOpened" component={PageMain} />
+        <Redirect exact from="/" to="/illustration" />
+      </Switch>
     </Body>
     <Footer />
   </Layout>
