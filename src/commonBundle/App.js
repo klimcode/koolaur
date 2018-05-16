@@ -2,17 +2,21 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { H1 } from './atoms/H';
+import { Layout, Header, Body, Footer } from './atoms/Layout';
 import { Flex } from './atoms/Flex';
 import { Logo } from './atoms';
-import { Layout, Header, Body, Footer } from './molecules/Layout';
 import { Menu } from './molecules/Menu';
+import PageMain from './pages/Main';
+import PageSketches from './pages/Sketches';
+import PageAbout from './pages/About';
 
 
 const pages = [
-  { name: 'Illustration', path: '/' },
-  { name: 'Sketches', path: '/sketches' },
-  { name: 'About', path: '/about' },
+  {
+    name: 'Illustration', path: '/', exact: true, comp: PageMain,
+  },
+  { name: 'Sketches', path: '/sketches', comp: PageSketches },
+  { name: 'About', path: '/about', comp: PageAbout },
 ];
 
 const FlexStyled = styled(Flex)`
@@ -37,9 +41,8 @@ export default () => (
       </FlexStyled>
     </Header>
     <Body>
-      <H1 gap>Koolaur</H1>
-      {pages.map((page, i) => (
-        <Route path={page.path} component={page.comp} key={i} />
+      {pages.map((p, i) => (
+        <Route path={p.path} exact={p.exact} component={p.comp} key={i} />
       ))}
     </Body>
     <Footer />
