@@ -32,12 +32,12 @@ const FlexStyled = styled(Flex)`
   }
 `;
 
-export default () => (
+export default props => (
   <Layout>
     <Header>
       <FlexStyled>
         <Logo />
-        <Menu pages={pages} />
+        <Menu pages={pages} {...props} />
       </FlexStyled>
     </Header>
     <Body>

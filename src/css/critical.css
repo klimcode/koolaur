@@ -12,10 +12,10 @@ body, #root {
   height: 100%;
 }
 ::-moz-selection {
-  background: #b3d4fc;
+  background: rgba(255, 100, 150, .4);
 }
 ::selection {
-  background: #b3d4fc;
+  background: rgba(255, 100, 150, .4);
 }
 ul {
   margin: 0;

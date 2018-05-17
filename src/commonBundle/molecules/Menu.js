@@ -69,6 +69,9 @@ const MenuLink = styled(Link)`
   line-height: 64px;
 
   ${cssColorPrimary}
+  ${p => p.active && css`
+    color: ${p => p.theme.colorActive};
+  `};
 
   @media ${minMd} {
     ${cssBaseline}
@@ -81,6 +84,10 @@ const SocialLink = styled(Link).attrs({ target: '_blank' })`
 
   ${cssColorPrimary}
   ${fnInlineGap()}
+
+  &:hover {
+    color: ${p => p.theme.colorActive};
+  }
 
   @media ${minMd} {
     height: 32px;
@@ -116,9 +123,10 @@ export class Menu extends React.Component {
         <MenuContent isOpened={this.state.isOpened}>
           <ContentWrapper onClick={openedMenuClick()}>
             <List>
-              {this.props.pages.map((page, i) => (
-                <MenuLink to={page.path} key={i}>{page.name}</MenuLink>
-              ))}
+              {this.props.pages.map((page, i) => {
+                const isCurrent = this.props.location.pathname === page.path;
+                return <MenuLink to={page.path} active={+isCurrent} key={i}>{page.name}</MenuLink>
+              })}
             </List>
             <Socials>
               <SocialLink to="https://www.instagram.com/koolaur/"><IconInstagram /></SocialLink>

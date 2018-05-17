@@ -2,8 +2,12 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { minSm, minMd } from '../atoms/css';
+import svgLoader from '../atoms/loader.svg';
 
 
+const bgLoader = css`
+  background: url(${svgLoader}) no-repeat center center;
+`;
 const ImageStyled = styled.div`
   display: inline-block;
   position: relative;
@@ -14,16 +18,20 @@ const ImageStyled = styled.div`
       left: ${p.outline / 2};
     `}
   `}
+  ${bgLoader}
 
   & img {
     max-width: 100%;
   }
 `;
-const Image = props => (
-  <ImageStyled {...props}>
-    <img src={props.src} alt={props.alt || ''} />
-  </ImageStyled>
-);
+const Image = (props) => {
+  const { src, alt, outline } = props;
+  return (
+    <ImageStyled outline={outline}>
+      <img src={src} alt={alt || ''} />
+    </ImageStyled>
+  );
+};
 
 
 const Grid = styled.div`
@@ -113,7 +121,7 @@ const LinkStyled = styled(Link)`
   }
   button:hover,
   button:focus {
-    background: ${p => p.theme.hoverBackground};
+    color: ${p => p.theme.colorActive};
   }
   & button::-moz-focus-inner {
     border: 0;
@@ -129,13 +137,13 @@ const LinkBtn = props => (
 
 const FocusedWrapper = styled.div`
 `;
-const ImgOrigin = styled.img.attrs({ alt: '' })`
+const ImgOrigin = styled(Image).attrs({ alt: '' })`
   &:not(:first-child) {
     margin-top: 16px;
   }
 `;
 const Controls = styled.div`
-  font-size: 20px;
+  font-size: 18px;
 `;
 const ProjectFocused = (props) => {
   const { originSrc } = props.project;
@@ -144,7 +152,7 @@ const ProjectFocused = (props) => {
     <FocusedWrapper>
       {originSrc.map((src, i) => <ImgOrigin src={src} key={i} />)}
       <Controls>
-        <LinkBtn text="Back" width="100%" />
+        <LinkBtn text="BACK TO GALLERY" width="100%" />
       </Controls>
     </FocusedWrapper>
   );
