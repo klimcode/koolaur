@@ -45,7 +45,7 @@ export default () => (
         {pages.map((p, i) => (
           <Route path={p.path} exact={p.exact} component={p.comp} key={i} />
         ))}
-        <Route path="/:isProjectOpened" component={PageMain} />
+        <Route path="/:projectOpened" component={PageMain} />
         <Redirect exact from="/" to="/illustration" />
       </Switch>
     </Body>

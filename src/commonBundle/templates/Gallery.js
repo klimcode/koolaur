@@ -46,7 +46,7 @@ const ThumbnailOverlay = styled.button`
   }
 `;
 const ProjectPreview = props => (
-  <Link to={props.item.url}>
+  <Link to={props.item.projectUrl}>
     <ProjectThumbnail>
       <Image src={props.item.thumbSrc} alt="" />
       <ThumbnailOverlay>{props.item.name}</ThumbnailOverlay>
@@ -83,12 +83,12 @@ const FocusedWrapper = styled.div`
   padding-bottom: 32px;
 `;
 const ProjectFocused = (props) => {
-  const { imgSrc } = props.project;
+  const { originSrc } = props.project[0]; // TEMP !
 
   return (
     <FocusedWrapper>
       {/* <Link to="/">BACK</Link> */}
-      <img src={imgSrc} alt="" />
+      <img src={originSrc} alt="" />
     </FocusedWrapper>
   );
 };
@@ -100,12 +100,12 @@ const PageWrapper = styled.div`
 `;
 export default (props) => {
   const { url } = props.match;
-  const { isProjectOpened } = props.match.params;
-  const project = props.items.find(el => el.url === url);
+  const { projectOpened } = props.match.params;
+  const project = props.items.find(el => el.projectUrl === url);
 
   return (
     <PageWrapper>
-      {isProjectOpened && <ProjectFocused project={project} />}
+      {projectOpened && <ProjectFocused project={project} />}
       <ProjectsList items={props.items} />
     </PageWrapper>
   );

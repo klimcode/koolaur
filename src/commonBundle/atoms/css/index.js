@@ -1,6 +1,6 @@
 import { css } from 'styled-components';
-import getBaselineStyles from './baseline';
-import { media as mediaDef } from './defaults';
+import getBaselineStyles from '../baseline';
+import { media as mediaDef } from '../defaults';
 import swtch from 'brief-switch';
 
 
