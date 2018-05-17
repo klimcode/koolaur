@@ -83,7 +83,7 @@ const FocusedWrapper = styled.div`
   padding-bottom: 32px;
 `;
 const ProjectFocused = (props) => {
-  const { originSrc } = props.project[0]; // TEMP !
+  const originSrc = props.project.originSrc[0]; // TEMP !
 
   return (
     <FocusedWrapper>
@@ -100,12 +100,11 @@ const PageWrapper = styled.div`
 `;
 export default (props) => {
   const { url } = props.match;
-  const { projectOpened } = props.match.params;
   const project = props.items.find(el => el.projectUrl === url);
 
   return (
     <PageWrapper>
-      {projectOpened && <ProjectFocused project={project} />}
+      {project && <ProjectFocused project={project} />}
       <ProjectsList items={props.items} />
     </PageWrapper>
   );
