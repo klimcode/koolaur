@@ -11,6 +11,9 @@ const bgLoader = css`
 const ImageStyled = styled.div`
   display: inline-block;
   position: relative;
+  min-height: 140px;
+  min-width: 140px;
+
   ${p => p.outline && css`
     margin: ${p.outline};
     ${(p.outline < 0) && css`
@@ -117,15 +120,18 @@ const LinkStyled = styled(Link)`
     -moz-appearance: none;
   }
   & button:focus {
+    background: none;
     outline: none;
   }
-  button:hover,
-  button:focus {
+  & button:hover {
     color: ${p => p.theme.colorActive};
+    background: none;
+    outline: none;
   }
   & button::-moz-focus-inner {
-    border: 0;
     padding: 0;
+    background: none;
+    border: 0;
   }
 `;
 const LinkBtn = props => (
@@ -136,6 +142,7 @@ const LinkBtn = props => (
 
 
 const FocusedWrapper = styled.div`
+  text-align: center;
 `;
 const ImgOrigin = styled(Image).attrs({ alt: '' })`
   &:not(:first-child) {
