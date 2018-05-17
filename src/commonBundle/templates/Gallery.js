@@ -129,15 +129,20 @@ const LinkBtn = props => (
 
 const FocusedWrapper = styled.div`
 `;
+const ImgOrigin = styled.img.attrs({ alt: '' })`
+  &:not(:first-child) {
+    margin-top: 16px;
+  }
+`;
 const Controls = styled.div`
   font-size: 20px;
 `;
 const ProjectFocused = (props) => {
-  const originSrc = props.project.originSrc[0]; // TEMP !
+  const { originSrc } = props.project;
 
   return (
     <FocusedWrapper>
-      <img src={originSrc} alt="" />
+      {originSrc.map((src, i) => <ImgOrigin src={src} key={i} />)}
       <Controls>
         <LinkBtn text="Back" width="100%" />
       </Controls>

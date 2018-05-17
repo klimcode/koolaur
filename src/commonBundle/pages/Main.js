@@ -20,8 +20,16 @@ const files = [
   { name: 'Festive forest', thumbSrc: 'festive-forest-min.jpg' },
   { name: 'Happy Christmas', thumbSrc: 'happy-cristmas-min.jpg' },
   { name: 'A Harry Potter movie', thumbSrc: 'hp-min.jpg' },
-  { name: 'Letters vol. 1', thumbSrc: 'letters-1-min.jpg' },
-  { name: 'Letters vol. 2', thumbSrc: 'letters-2-min.jpg' },
+  {
+    name: 'Letters vol. 1',
+    thumbSrc: 'letters-1-min.jpg',
+    originSrc: ['letters/l-1-01.jpg', 'letters/l-1-02.jpg', 'letters/l-1-03.jpg', 'letters/l-1-04.jpg', 'letters/l-1-05.jpg', 'letters/l-1-06.jpg'],
+  },
+  {
+    name: 'Letters vol. 2',
+    thumbSrc: 'letters-2-min.jpg',
+    originSrc: ['letters/l-2-01.jpg', 'letters/l-2-02.jpg', 'letters/l-2-03.jpg', 'letters/l-2-04.jpg', 'letters/l-2-05.jpg', 'letters/l-2-06.jpg', 'letters/l-2-07.jpg', 'letters/l-2-08.jpg'],
+  },
   { name: 'Luna Lovegood', thumbSrc: 'luna-min.jpg' },
   { name: 'Music', thumbSrc: 'music-min.jpg' },
   { name: 'Sky may fall', thumbSrc: 'sky-min.jpg' },
