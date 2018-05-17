@@ -1,23 +1,44 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { minSm, minMd } from '../atoms/css';
 
 
 const ImageStyled = styled.div`
-  margin: -2px;
+  display: inline-block;
+  position: relative;
+  ${p => p.outline && css`
+    margin: ${p.outline};
+    ${(p.outline < 0) && css`
+      top: ${p.outline / 2};
+      left: ${p.outline / 2};
+    `}
+  `}
 
   & img {
     max-width: 100%;
   }
 `;
 const Image = props => (
-  <ImageStyled>
+  <ImageStyled {...props}>
     <img src={props.src} alt={props.alt || ''} />
   </ImageStyled>
 );
 
 
+const Grid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+`;
+const GridItem = styled.div`
+  box-sizing: border-box;
+  padding: 2px;
+  width: 50%;
+
+  @media ${minSm} {
+    width: 33.3334%;
+  }
+`;
 const ProjectThumbnail = styled.div`
   position: relative;
   height: 0;
@@ -36,7 +57,7 @@ const ThumbnailOverlay = styled.button`
     width: 100%;
     color: #fff;
     font-size: 24px;
-    background: rgba(255, 100, 180, .8);
+    background: ${p => p.theme.hoverBackground};
     opacity: 0;
     cursor: pointer;
 
@@ -45,50 +66,81 @@ const ThumbnailOverlay = styled.button`
     }
   }
 `;
-const ProjectPreview = props => (
-  <Link to={props.item.projectUrl}>
-    <ProjectThumbnail>
-      <Image src={props.item.thumbSrc} alt="" />
-      <ThumbnailOverlay>{props.item.name}</ThumbnailOverlay>
-    </ProjectThumbnail>
-  </Link>
-);
+const ProjectsList = (props) => {
+  const { items } = props;
+  return (
+    <Grid>
+      { items && items.map((item, i) => (
+        <GridItem key={i}>
+          <Link to={item.projectUrl}>
+            <ProjectThumbnail>
+              <Image src={item.thumbSrc} outline="-2px" />
+              <ThumbnailOverlay>{item.name}</ThumbnailOverlay>
+            </ProjectThumbnail>
+          </Link>
+        </GridItem>
+      ))}
+    </Grid>
+  );
+};
 
 
-const ProjectsListStyled = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
-const GridItem = styled.div`
-  box-sizing: border-box;
-  padding: 2px;
-  width: 50%;
+const LinkStyled = styled(Link)`
+  display: inline-block;
+  text-decoration: none;
+  width: ${p => p.width};
 
-  @media ${minSm} {
-    width: 33.3334%;
+  & button {
+    height: 64px;
+    width: 100%;
+
+    padding: 0;
+
+    color: ${p => p.theme.color};
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    user-select: none;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+  & button:focus {
+    outline: none;
+  }
+  button:hover,
+  button:focus {
+    background: ${p => p.theme.hoverBackground};
+  }
+  & button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
   }
 `;
-const ProjectsList = props => (
-  <ProjectsListStyled>
-    { props.items && props.items.map((item, i) => (
-      <GridItem key={i}>
-        <ProjectPreview item={item} />
-      </GridItem>
-    ))}
-  </ProjectsListStyled>
+const LinkBtn = props => (
+  <LinkStyled to={props.to || '/'} width={props.width}>
+    <button>{props.text || 'text'}</button>
+  </LinkStyled>
 );
 
 
 const FocusedWrapper = styled.div`
-  padding-bottom: 32px;
+`;
+const Controls = styled.div`
+  font-size: 20px;
 `;
 const ProjectFocused = (props) => {
   const originSrc = props.project.originSrc[0]; // TEMP !
 
   return (
     <FocusedWrapper>
-      {/* <Link to="/">BACK</Link> */}
       <img src={originSrc} alt="" />
+      <Controls>
+        <LinkBtn text="Back" width="100%" />
+      </Controls>
     </FocusedWrapper>
   );
 };
@@ -96,7 +148,7 @@ const ProjectFocused = (props) => {
 
 const PageWrapper = styled.div`
   padding-top: 32px;
-  padding-bottom: 64px;
+  padding-bottom: 32px;
 `;
 export default (props) => {
   const { url } = props.match;
@@ -105,7 +157,7 @@ export default (props) => {
   return (
     <PageWrapper>
       {project && <ProjectFocused project={project} />}
-      <ProjectsList items={props.items} />
+      {!project && <ProjectsList items={props.items} />}
     </PageWrapper>
   );
 };
