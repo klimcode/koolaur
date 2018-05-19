@@ -1,16 +1,4 @@
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src:
-    local('Open Sans Regular'),
-    local('OpenSans-Regular'),
-    url('./fonts/opensans-regular.woff2') format('woff2'),
-    url('./fonts/opensans-regular.woff') format('woff'),
-    /* OLD Safari, Android, iOS */
-    url('./fonts/opensans-regular.ttf')  format('truetype');
-}
-
+@import url(./vendor/normalize-2.css);
 
 @media print {
   *,

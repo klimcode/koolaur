@@ -1,5 +1,18 @@
 @import url(./vendor/normalize.css);
 
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Open Sans Regular'),
+    local('OpenSans-Regular'),
+    url('./fonts/opensans-regular.woff2') format('woff2'),
+    url('./fonts/opensans-regular.woff') format('woff'),
+    /* OLD Safari, Android, iOS */
+    url('./fonts/opensans-regular.ttf')  format('truetype');
+}
+
 /* GLOBALS */
 html {
   height: 100%;
@@ -11,31 +24,5 @@ html {
 body, #root {
   height: 100%;
 }
-::-moz-selection {
-  background: rgba(255, 100, 150, .4);
-}
-::selection {
-  background: rgba(255, 100, 150, .4);
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-img {
-  max-width: 100%;
-}
-.noselect {user-select: none;}
-
-
-/* > Sony Xperia screen */
-@media screen and (min-width: 541px) {
-}
-
-/* 960px + 8px*2 mobile paddings */
-@media screen and (min-width: 976px) {
-}
-
-/* > Surface pro 4 screen */
-@media screen and (min-width: 1370px) {
-}
+::-moz-selection { background: rgba(255, 100, 150, .4); }
+::selection {      background: rgba(255, 100, 150, .4); }
