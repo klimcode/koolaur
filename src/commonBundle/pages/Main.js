@@ -7,7 +7,7 @@ import { convertFilesToProjects } from '../atoms/functions';
 // const images = require.context('../../../public/static/media', false, /\.(jpe?g|png)$/).keys();
 
 const files = [
-  { name: 'The princess of Tea Ceremonies', thumbSrc: 'princess-tea-min.jpg' },
+  { name: 'The princess of Tea Ceremonies', thumbSrc: 'princess-tea-min.jpg', desc: 'This girl is an forest elf. Some think she is a witch, and because she is not necessarily good or bad, that is not the strangest idea to consider.' },
   { name: 'The Prince who Grows Moss', thumbSrc: 'prince-moss-min.jpg' },
   { name: 'The princess of Beetles and Butterflies', thumbSrc: 'princess-beetles-min.jpg' },
   { name: 'The Princess of Cozy Yarn', thumbSrc: 'princess-yarn-min.jpg' },

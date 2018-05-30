@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styled, { css } from 'styled-components';
 import { minSm, minMd } from '../atoms/css';
+import { P } from '../atoms/P';
 import svgLoader from '../atoms/loader.svg';
 
 
@@ -149,15 +150,20 @@ const ImgOrigin = styled(Image).attrs({ alt: '' })`
     margin-top: 16px;
   }
 `;
+const Description = styled(P)`
+  max-width: 640px;
+  margin: auto;
+`;
 const Controls = styled.div`
   font-size: 18px;
 `;
 const ProjectFocused = (props) => {
-  const { originSrc } = props.project;
+  const { originSrc, desc } = props.project;
 
   return (
     <FocusedWrapper>
       {originSrc.map((src, i) => <ImgOrigin src={src} key={i} />)}
+      <Description>{desc}</Description>
       <Controls>
         <LinkBtn text="BACK TO GALLERY" width="100%" />
       </Controls>
