@@ -8,11 +8,11 @@ import { convertFilesToProjects } from '../atoms/functions';
 
 const files = [
   { name: 'The princess of Tea Ceremonies', thumbSrc: 'princess-tea-min.jpg', desc: 'This girl is an forest elf. Some think she is a witch, and because she is not necessarily good or bad, that is not the strangest idea to consider.' },
+  { name: 'Princess of Soft Blankets', thumbSrc: 'princess-blankets-min.jpg', desc: 'The princess of blankets, the lady of pillows, and the heroine of those who are having nightmares. These are just a couple of names gives to this fearsome lady. She has slain many monsters with just a swing or her magical pillow. The blanket she is wearing has the power of flight and also functions as protective armor. Unknown to most people is that she also wears magical socks. These socks might seem innocent but they are responsible for her swiftness and never-ending energy 🧦✨ So, if you ever have terrible nightmares again, you know who to call!' },
   { name: 'The Prince who Grows Moss', thumbSrc: 'prince-moss-min.jpg' },
   { name: 'The princess of Beetles and Butterflies', thumbSrc: 'princess-beetles-min.jpg' },
   { name: 'The Princess of Cozy Yarn', thumbSrc: 'princess-yarn-min.jpg' },
   { name: 'The Lantern Guardian Princess', thumbSrc: 'princess-lantern-min.jpg' },
-  { name: 'Princess of Soft Blankets', thumbSrc: 'princess-blankets-min.jpg' },
   { name: 'A quiet place', thumbSrc: 'a-quiet-place-min.jpg' },
   { name: 'Annihilation', thumbSrc: 'annihilation-min.jpg' },
   { name: 'A witch', thumbSrc: 'witch-min.jpg' },

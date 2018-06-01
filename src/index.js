@@ -6,9 +6,10 @@ import { ThemeProvider } from 'styled-components';
 
 import App from './commonBundle/App';
 import theme from './css/theme';
-import './css/critical.css';
-// lazy loading
-import('./css/rest.css');
+
+import './css/critical.css'; // is downloaded as a separate css file before the JS bundle
+
+import('./css/rest.css'); // is downloaded after the JS bundle
 
 
 ReactDOM.render(
