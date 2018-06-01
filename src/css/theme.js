@@ -1,29 +1,21 @@
 import fontMetrics from './font-metrics';
 
-const getMetrics = (props) => {
-  const { theme, component } = props;
+const baseline = (gapArg, fontSizeArg, fontFamilyArg) => {
   const {
     METRICS, METRICS_DEF, FF_DEF, FS_DEF,
-  } = theme.fontMetrics;
-
-  const themeGlobalFF = theme && theme.fontFamily;
-  const themeComponent = theme && theme[component];
-
-  const themeFontFamily = (themeComponent && themeComponent.fontFamily) || themeGlobalFF;
-  const themeFontSize = themeComponent && themeComponent.fontSize;
-  const themeGap = themeComponent && themeComponent.gap;
-  const finalFontFamily = props.ff || themeFontFamily || FF_DEF;
-  const finalFontSize = props.fs || themeFontSize || props.fontSizeDef || FS_DEF;
+  } = fontMetrics;
 
 
-  const gap = ((props.gap || themeGap || props.gapDef) && ' gap') || '';
-  const id = `${finalFontFamily}: ${finalFontSize}${gap}`;
+  const fontFamily = fontFamilyArg || FF_DEF;
+  const fontSize = fontSizeArg || FS_DEF;
+  const gap = (gapArg && ' gap') || '';
+  const id = `${fontFamily}: ${fontSize}${gap}`;
 
-  // debugger;
+
   const result = METRICS[id];
   /* eslint-disable no-console */
   if (!result && console && console.error) {
-    console.error(`Font Metrics "${id}" for "${component}" component not found. Default Metrics used instead.`);
+    console.error(`Font Metrics "${id}" was not found. Default Metrics used instead.`);
   }
 
   return result || METRICS_DEF || '';
@@ -31,12 +23,8 @@ const getMetrics = (props) => {
 
 export default {
   color: '#333',
+  colorHeaders: '#555',
   colorActive: 'rgba(255, 100, 150, .8)',
   hoverBackground: 'rgba(255, 100, 150, .4)',
-  fontFamily: 'Open Sans',
-  h1: {
-  },
-  h2: {
-  },
-  fontMetrics,
+  baseline,
 };

@@ -1,4 +1,3 @@
-
 export const convertFilesToProjects = (files, urlBase, srcBase) => (
   files.map((item) => {
     const { name, desc } = item;

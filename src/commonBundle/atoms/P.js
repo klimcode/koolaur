@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import getBaselineStyles from './baseline';
 
 export const P = styled.p`
-  ${getBaselineStyles}
+  ${p => p.theme.baseline(1, 16)}
 `;
 P.defaultProps = {
   component: 'p',

@@ -1,5 +1,5 @@
 const FS_DEF = 16;
-const FF_DEF = 'openSans';
+const FF_DEF = 'Open Sans';
 const METRICS_DEF = `
   padding: 0 0 7px 0;
   margin: -7px 0 0 0;

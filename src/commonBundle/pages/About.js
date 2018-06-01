@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { H2 } from '../atoms/H';
+import { H1, H2 } from '../atoms/H';
 import { P } from '../atoms/P';
 
 
@@ -29,9 +29,9 @@ export default () => (
   <PageAbout>
     <Avatar src="/static/media/koolaur-min.jpg" />
     <TextAbout>
-      <H2 gap>
+      <H1 gap>
         Hi there!
-      </H2>
+      </H1>
       <P>
         My name is Polina, I&apos;m an illustrator. <br />
         Currently reside in Krasnodar, Russia.

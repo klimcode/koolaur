@@ -1,7 +1,6 @@
 import { css } from 'styled-components';
-import getBaselineStyles from '../baseline';
-import { media as mediaDef } from '../defaults';
 import swtch from 'brief-switch';
+import { media as mediaDef } from '../defaults';
 
 
 const getMediaBreakpoint = minmax => size => (props) => {
@@ -45,7 +44,7 @@ export const cssColorPrimary = css`
   color: ${p => p.theme.color || '#000000'};
 `;
 export const cssBaseline = css`
-  ${getBaselineStyles}
+  ${p => p.theme.baseline(0, 16)}
 `;
 
 
