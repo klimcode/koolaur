@@ -161,12 +161,16 @@ const Controls = styled.div`
 `;
 const ProjectFocused = (props) => {
   const { originSrc, desc } = props.project;
-  const descHtml = () => ({ __html: desc.replace(/\n/g, '<br>') });
+  const html = () => (
+    (typeof desc === 'string')
+      ? { __html: desc.replace(/\n/g, '<br>') }
+      : null
+  );
 
   return (
     <FocusedWrapper>
       {originSrc.map((src, i) => <ImgOrigin src={src} key={i} />)}
-      <Description dangerouslySetInnerHTML={descHtml()} />
+      <Description dangerouslySetInnerHTML={html(desc)} />
       <Controls>
         <LinkBtn text="BACK TO GALLERY" width="100%" />
       </Controls>
