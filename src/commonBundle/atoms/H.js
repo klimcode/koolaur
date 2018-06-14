@@ -5,13 +5,11 @@ const base = (gap, fontSize, fontFamily) => css`
 `;
 
 export const H1 = styled.h1`
-  ${p => p.theme.h1};
+  ${p => p.theme.cssH1};
 `;
 
 export const H2 = styled.h2`
-  ${p => p.theme.baseline(1, 40)};
-  color: ${p => p.theme.colorHeaders};
-  font-weight: normal;
+  ${p => p.theme.cssH2};
 `;
 
 export const H3 = styled.h3`

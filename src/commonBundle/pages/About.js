@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { H1, H2, H3 } from '../atoms/H';
+import { H1, H2 } from '../atoms/H';
 import { P } from '../atoms/P';
 
 
@@ -32,8 +32,6 @@ export default () => (
       <H1>
         Hi there!
       </H1>
-      <H2>H2 header</H2>
-      <H3 css="display: inline; padding: 40px;">H3 header</H3>
       <P>
         My name is Polina, I&apos;m an illustrator. <br />
         Currently reside in Krasnodar, Russia.

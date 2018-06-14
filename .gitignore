@@ -1,3 +1,6 @@
+# outdated files
+.ignored/
+
 # Compiled React project
 build/
 
