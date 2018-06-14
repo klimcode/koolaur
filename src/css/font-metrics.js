@@ -151,6 +151,19 @@ const METRICS = {
   `,
 };
 
-export default {
-  METRICS, METRICS_DEF, FF_DEF, FS_DEF,
+
+export default (gapArg, fontSizeArg, fontFamilyArg) => {
+  const fontFamily = fontFamilyArg || FF_DEF;
+  const fontSize = fontSizeArg || FS_DEF;
+  const gap = (gapArg && ' gap') || '';
+  const id = `${fontFamily}: ${fontSize}${gap}`;
+
+
+  const result = METRICS[id];
+  /* eslint-disable no-console */
+  if (!result && console && console.error) {
+    console.error(`Font Metrics "${id}" was not found. Default Metrics used instead.`);
+  }
+
+  return result || METRICS_DEF || '';
 };

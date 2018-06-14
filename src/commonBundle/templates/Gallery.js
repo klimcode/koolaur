@@ -56,6 +56,7 @@ const ProjectThumbnail = styled.div`
   height: 0;
   padding-bottom: 100%;
   overflow: hidden;
+  text-align: center;
 `;
 const ThumbnailOverlay = styled.button`
   display: none;
@@ -153,17 +154,19 @@ const ImgOrigin = styled(Image).attrs({ alt: '' })`
 const Description = styled(P)`
   max-width: 640px;
   margin: auto;
+  text-align: left;
 `;
 const Controls = styled.div`
   font-size: 18px;
 `;
 const ProjectFocused = (props) => {
   const { originSrc, desc } = props.project;
+  const descHtml = () => ({ __html: desc.replace(/\n/g, '<br>') });
 
   return (
     <FocusedWrapper>
       {originSrc.map((src, i) => <ImgOrigin src={src} key={i} />)}
-      <Description>{desc}</Description>
+      <Description dangerouslySetInnerHTML={descHtml()} />
       <Controls>
         <LinkBtn text="BACK TO GALLERY" width="100%" />
       </Controls>
