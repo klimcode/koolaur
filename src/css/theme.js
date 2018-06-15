@@ -14,12 +14,20 @@ export default {
   bg: {
     first: '#eee',
   },
+  cssP: css`
+    ${baseline(1, 16)};
+  `,
   cssH1: css`
     ${baseline(1, 40)};
     color: ${colorHeaders};
   `,
   cssH2: css`
     ${baseline(1, 32)};
+    color: ${colorHeaders};
+    font-weight: normal;
+  `,
+  cssH3: css`
+    ${baseline(1, 24)};
     color: ${colorHeaders};
     font-weight: normal;
   `,

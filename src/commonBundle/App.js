@@ -7,7 +7,7 @@ import { Flex } from './atoms/Flex';
 import { Logo } from './atoms/Logo';
 import { Menu } from './molecules/Menu';
 import PageMain from './pages/Main';
-import PageSketches from './pages/Sketches';
+// import PageSketches from './pages/Sketches';
 import PageAbout from './pages/About';
 
 
@@ -15,7 +15,7 @@ const pages = [
   {
     name: 'Illustration', path: '/illustration', exact: true, comp: PageMain,
   },
-  { name: 'Sketches', path: '/sketches', comp: PageSketches },
+  // { name: 'Sketches', path: '/sketches', comp: PageSketches },
   { name: 'About', path: '/about', comp: PageAbout },
 ];
 

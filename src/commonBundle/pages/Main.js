@@ -2,7 +2,7 @@ import React from 'react';
 // import styled from 'styled-components';
 import Gallery from '../templates/Gallery';
 import { convertFilesToProjects } from '../atoms/functions';
-import files from '../filesList';
+import files from '../illustrations';
 
 
 const urlBase = '/';
