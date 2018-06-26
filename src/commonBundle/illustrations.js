@@ -1,5 +1,13 @@
 export default [
   {
+    name: 'Shadows',
+    thumbSrc: 'shadows-min.jpg',
+    desc: `These are the children of the shadow. They find it difficult to live in the daylight, so they try to capture the light in this jar. Light numbs their senses and if exposed for too long it might cause serious harm. However, if the light is caught, it poses no dangerous threat anymore!
+    Night animals joined their dance as well;
+    hedgehogs, frogs and bats all have
+    their own dancemoves to celebrate this special event ✨`,
+  },
+  {
     name: 'Tales',
     thumbSrc: 'childhoodweek2018-tales-min.jpg',
     desc: `Wandering for days
@@ -9,7 +17,7 @@ export default [
     🐦✨
     Hey, who recognizes this image?
     Recently I’ve watched the cartoon "Over The Garden Wall" and it impressed me pleasantly. It’s so kind, funny and light, yet very interesting! I like that it has short episodes too
-    And you fall in love with the characters from the first episode😁
+    And you fall in love with the characters from the first episode 😁
     And what are your impressions? I would like to watch more cartoons like this; maybe one of you has any suggestions? Please let me know!`,
   },
   {
@@ -18,7 +26,7 @@ export default [
     desc: `Today I will tell you a story about this graceful lady.
     As many of you know there are many fantastic things in our world, and this girl might be one of the strangest you will witness. Some say she is the personification of a gull, born from an egg with characteristics of both human and bird. It should not come as a surprise that she can talk to birds and soar through the skies just like a gull can.
     What surprises most, she says, she has an incredible obsession with peas. Everywhere she goes, she plants peas! And not just on our planet, no, she travels to different planets as well just to plant peas. She cherishes them just like a mother cherishes her children. Once they are fully grown, which can take up to a thousand years, a new star will be born.
-    A beautiful sight to behold🌅✨`,
+    A beautiful sight to behold 🌅✨`,
   },
   {
     name: 'Tempting',
@@ -109,7 +117,7 @@ export default [
     name: 'A witch',
     thumbSrc: 'witch-min.jpg',
     desc: `<a href="https://www.instagram.com/p/Baw2ZNhjVia/" target="_blank">zueva.po</a> and I redrew works of each other.
-    Yes, it does not quite look similar to each other. I was eager to paint something springy🌸🍄`,
+    Yes, it does not quite look similar to each other. I was eager to paint something springy 🌸🍄`,
   },
   {
     name: 'Mary and a Witch\'s flower',
@@ -133,7 +141,14 @@ export default [
     I don't know, what would you like to know about me?
     By the way, now it's your turn;)`,
   },
-  { name: 'Sea', thumbSrc: 'sea-min.jpg' },
+  {
+    name:'Sea',
+    thumbSrc:'sea-min.jpg',
+    desc: `The portrait is made for a girl-photographer, the soul of mountains and a sea.
+    My client wanted the portrait reflects the type of her activity and her personality.
+    I drew an illustration, and my friend wrote a poem for it.
+    I hope, you enjoy the project! ;)`,
+  },
   { name: 'A Parisian naturalist', thumbSrc: 'naturalist-min.jpg' },
   { name: 'Happy Christmas', thumbSrc: 'happy-cristmas-min.jpg' },
   { name: 'Must be a Weasley', thumbSrc: 'weasley-min.jpg' },
