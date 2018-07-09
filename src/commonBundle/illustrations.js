@@ -1,5 +1,31 @@
 export default [
   {
+    name: 'Nice cream',
+    thumbSrc: 'rn-min.jpg',
+    desc: `New #drawthisinyourstyle with @ruthhammondillustration@
+    `,
+  },
+  {
+    name: 'The Garden',
+    thumbSrc: 'the-garden-min.jpg',
+    desc: `As long as she can remember, there are rumours in her small country that there is a magical garden at the king's palace. Vora decided to jump over the wall of the palace in an impulse and as soon as she landed on her feet, the king’s guards got sight of her and immediately went after her.
+    Unknowingly where to run to, she just ran as fast as she could in a random direction, away from the guards..
+    #drawthisinyourstyle with @dreachie@
+    `,
+  },
+  {
+    name: 'Piclit',
+    thumbSrc: 'piclit-min.jpg',
+    desc: `A portrait of @piclit@
+    `,
+  },
+  {
+    name: 'Helene',
+    thumbSrc: 'helene-min.jpg',
+    desc: `A portrait of @la.funambule@
+    `,
+  },
+  {
     name: 'Shadows',
     thumbSrc: 'shadows-min.jpg',
     desc: `These are the children of the shadow. They find it difficult to live in the daylight, so they try to capture the light in this jar. Light numbs their senses and if exposed for too long it might cause serious harm. However, if the light is caught, it poses no dangerous threat anymore!
@@ -52,7 +78,7 @@ export default [
     desc: `This girl is an forest elf. Some think she is a witch, and because she is not necessarily good or bad, that is not the strangest idea to consider.
     In this challenge I decided to introduce you to cool profiles as well!
 
-    So please check out the profile @peachycinnamon, it’s full of magic and inspiration!`,
+    So please check out the profile @peachycinnamon@, it’s full of magic and inspiration!`,
   },
   {
     name: 'Princess of Soft Blankets',
@@ -69,7 +95,7 @@ export default [
     I do feel sorry for my gardener as he never has a day off because of this strange phenomenon.
     Many people come to my kingdom just to experience the energy of nature, and they are all very welcome! 💛
 
-    Thanks @hijo_de_la_tierra for the inspiration and @elmaripskamp for the story!)`,
+    Thanks @hijo_de_la_tierra@ for the inspiration and @elmaripskamp@ for the story!)`,
   },
   {
     name: 'The princess of Beetles and Butterflies',
@@ -78,14 +104,14 @@ export default [
     She travels all across the globe just to search for different species.
     Rumors are that the last place she was seen in is a faraway country which has no official name yet.
 
-    Also, please check out @ffionsnaith, her photos are so light and feel so cozy!`,
+    Also, please check out @ffionsnaith@, her photos are so light and feel so cozy!`,
   },
   {
     name: 'The Princess of Cozy Yarn',
     thumbSrc: 'princess-yarn-min.jpg',
     desc: `The girl lives on an island in an old house.
     She likes to knit, draw, paint, bake, read and much more. She also likes blogging and talking photos. So, her profile is filled with beautiful photos ^^
-    Welcome to @woodfolkk!
+    Welcome to @woodfolkk@!
     It smells like forest here 🌲✨`,
   },
   {
@@ -95,7 +121,7 @@ export default [
     Meet Khonsu, one of the three magicians of the Shadow Clan.
     Her magic abilities are a mix of light and shadow. Khonsu is also considered to be one of the most intelligent and cunning of her clan. Both of these features are incredibly helpful in preventing evildoers from entering the sacred forest which the clan seeks to protect.
     There is a small living fire in the lantern, and it gets released when there are innocent travelers in the forest. Her task is then to lead the travelers safely to the edge of the forest.
-    The hero is drawn in the image of @eeearthyvibesss`,
+    The hero is drawn in the image of @eeearthyvibesss@`,
   },
   {
     name: 'A quiet place',

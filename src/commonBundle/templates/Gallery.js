@@ -47,7 +47,7 @@ const ProjectFocused = (props) => {
       ? {
         __html: desc
           .replace(/\n/g, '<br>')
-          .replace(/@(\w*)/g, '<a target="_blank" href="https://www.instagram.com/$1/">@$1</a>'),
+          .replace(/@(.*)@/g, '<a target="_blank" href="https://www.instagram.com/$1/">@$1</a>'),
       }
       : null
   );
