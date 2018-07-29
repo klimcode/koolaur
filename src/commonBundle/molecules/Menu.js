@@ -13,6 +13,7 @@ import Hamburger from '../atoms/Hamburger';
 import IconFacebook from '../atoms/icons/IconFacebook';
 import IconInstagram from '../atoms/icons/IconInstagram';
 import IconBehance from '../atoms/icons/IconBehance';
+import IconEtsy from '../atoms/icons/IconEtsy';
 
 
 const cssMenuOpened = css`
@@ -54,10 +55,12 @@ const List = styled.div`
 `;
 const Socials = styled.div`
   padding-top: 32px;
+  line-height: 96px;
 
   @media ${minMd} {
-    text-align: right;
     padding: 16px 0;
+    line-height: 32px;
+    text-align: right;
   }
 `;
 const MenuLink = styled(Link)`
@@ -79,8 +82,13 @@ const MenuLink = styled(Link)`
   }
 `;
 const SocialLink = styled(Link).attrs({ target: '_blank' })`
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
   height: 64px;
+  ${p => p.width && `width: ${p.width * 2}px`};
+
+  vertical-align: middle;
 
   ${cssColorPrimary}
   ${fnInlineGap()}
@@ -91,6 +99,7 @@ const SocialLink = styled(Link).attrs({ target: '_blank' })`
 
   @media ${minMd} {
     height: 32px;
+    ${p => p.width && `width: ${p.width}px`};
   }
 `;
 
@@ -132,6 +141,7 @@ export class Menu extends React.Component {
               <SocialLink to="https://www.instagram.com/koolaur/"><IconInstagram /></SocialLink>
               <SocialLink to="https://www.facebook.com/Koolaur"><IconFacebook /></SocialLink>
               <SocialLink to="https://www.behance.net/polina_kli3191"><IconBehance /></SocialLink>
+              <SocialLink to="https://www.etsy.com/shop/KoolaurStore" width="50"><IconEtsy /></SocialLink>
             </Socials>
           </ContentWrapper>
         </MenuContent>

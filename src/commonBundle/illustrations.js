@@ -1,5 +1,21 @@
 export default [
   {
+    name: 'Wild boy',
+    thumbSrc: 'wild-boy-min.jpg',
+    desc: `This little kid is the son of one of the many forest gods.
+    On normal days he likes to be in his human form, though some traits of his original form are still visible. Hair of leaves, sunlight filled eyes and the logo of his god tribe on his chest are some things that is he not able to transform.
+    Today is a special day, because one of his animal friends will start a new job. So he swung them all in the air and gave them some new clothes! Can you spot the friend who will start today? ;)
+    Redrawing of @beatrice.blue@
+    `,
+  },
+  {
+    name: 'Friends',
+    thumbSrc: 'friends-min.jpg',
+    desc: `It is for your own good if you do not mess with these siblings. While they might appear cute, they are everything but that! They cause nothing but trouble, they terrorize the village when they are bored and the forest they live in has not been safe for years. One of their favourite magic tricks is to transform into a pair of socks… and when an innocent person puts on the socks, the socks run to the forest with the person still in it!
+    This is my entry for @chabeescalante@ and @loisvb@ drawing challenge #drawthisinyourstyle.
+    `,
+  },
+  {
     name: 'Nice cream',
     thumbSrc: 'rn-min.jpg',
     desc: `New #drawthisinyourstyle with @ruthhammondillustration@
