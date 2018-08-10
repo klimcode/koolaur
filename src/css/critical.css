@@ -15,3 +15,10 @@ body, #root {
 }
 ::-moz-selection { background: rgba(255, 100, 150, .4); }
 ::selection {      background: rgba(255, 100, 150, .4); }
+
+a {
+  color: rgba(255,100,150,1);
+}
+a:hover {
+  text-decoration: none;
+}

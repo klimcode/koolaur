@@ -1,5 +1,16 @@
 export default [
   {
+    name: 'Morning’s Walking Dream',
+    thumbSrc: 'mornings-walking-dream-min.jpg',
+    desc: `...A sudden joy swarmed to a heart
+    with open arms reaching out
+    Through time to set a place for the unthought..
+
+    This is my redrawing of @ami.ette@ art.
+    To this sketch, I was inspired by a nice song of In Gowan Ring - Morning’s Walking Dream.
+    `,
+  },
+  {
     name: 'Wild boy',
     thumbSrc: 'wild-boy-min.jpg',
     desc: `This little kid is the son of one of the many forest gods.
