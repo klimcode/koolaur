@@ -1,7 +1,5 @@
 # Koolaur
 
-![this project is under construction](https://klimcode.github.io/base/construction.png)
-
 A portfolio-website for an Illustrator.
 
 ## Tech Stack
