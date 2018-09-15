@@ -46,7 +46,7 @@ export default () => (
       </H2>
       <P>
         For any questions regarding work or just to say hi, <br />
-        you can drop me a line via email: <a href="mailto:koolaur19@mail.ru">koolaur19@mail.ru</a>.
+        you can drop me a line via email: <a href="mailto:koolaur@gmail.com">koolaur@gmail.com</a>.
       </P>
       <P>
         Thanks for visiting my website,<br />

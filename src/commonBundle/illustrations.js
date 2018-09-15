@@ -1,5 +1,14 @@
 export default [
   {
+    name: 'Autumn',
+    thumbSrc: 'autumn-min.jpg',
+    desc: `What is beautiful about autumn?
+    I know for sure that it brings
+    people together because everyone is hiding in their homes :)
+    And this is my favourite time... when it's raining outside and you are holding a huge mug of hot chocolate while wearing a soft sweater, wrapped in a blanket... You spend time with your relatives and friends and do things together ^-^
+    `,
+  },
+  {
     name: 'Morning’s Walking Dream',
     thumbSrc: 'mornings-walking-dream-min.jpg',
     desc: `...A sudden joy swarmed to a heart
