@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Redirect, Switch } from 'react-router-dom';
+import { Route, Redirect, Switch, Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Layout, Header, Body, Footer } from './atoms/Layout';
@@ -36,7 +36,9 @@ export default props => (
   <Layout>
     <Header>
       <FlexStyled>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
         <Menu pages={pages} {...props} />
       </FlexStyled>
     </Header>

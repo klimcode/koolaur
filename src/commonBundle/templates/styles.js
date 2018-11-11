@@ -10,10 +10,16 @@ const bgLoader = css`
   background: url(${svgLoader}) no-repeat center center;
 `;
 export const ImageStyled = styled.div`
-  display: inline-block;
+  /* display: inline-block;
   position: relative;
   min-height: 140px;
-  min-width: 140px;
+  min-width: 140px; */
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
   ${p => p.outline && css`
     margin: ${p.outline};

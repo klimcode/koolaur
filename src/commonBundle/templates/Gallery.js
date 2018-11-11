@@ -4,33 +4,27 @@ import { Link } from 'react-router-dom';
 import * as S from './styles';
 
 
-const Image = (props) => {
-  const { src, alt, outline } = props;
-  return (
-    <S.ImageStyled outline={outline}>
-      <img src={src} alt={alt || ''} />
-    </S.ImageStyled>
-  );
-};
+const Image = ({ src, alt, outline }) => (
+  <S.ImageStyled outline={outline}>
+    <img src={src} alt={alt || ''} />
+  </S.ImageStyled>
+);
 
 
-const ProjectsList = (props) => {
-  const { items } = props;
-  return (
-    <S.Grid>
-      { items && items.map((item, i) => (
-        <S.GridItem key={i}>
-          <Link to={item.projectUrl}>
-            <S.ProjectThumbnail>
-              <Image src={item.thumbSrc} outline="-2px" />
-              <S.ThumbnailOverlay>{item.name}</S.ThumbnailOverlay>
-            </S.ProjectThumbnail>
-          </Link>
-        </S.GridItem>
-      ))}
-    </S.Grid>
-  );
-};
+const ProjectsList = ({ items }) => (
+  <S.Grid>
+    { items && items.map((item, i) => (
+      <S.GridItem key={i}>
+        <Link to={item.projectUrl}>
+          <S.ProjectThumbnail>
+            <Image src={item.thumbSrc} outline="-2px" />
+            <S.ThumbnailOverlay>{item.name}</S.ThumbnailOverlay>
+          </S.ProjectThumbnail>
+        </Link>
+      </S.GridItem>
+    ))}
+  </S.Grid>
+);
 
 
 const LinkBtn = props => (

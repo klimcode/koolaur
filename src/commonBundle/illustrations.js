@@ -1,5 +1,22 @@
 export default [
   {
+    name: 'Morgan\'s working place',
+    thumbSrc: 'morgan-working-place-min.jpg',
+    desc: `Here is the result of my work with Morgan - an Australian artist @morganschaafsmaart@
+    `,
+  },
+  {
+    name: 'Morgan',
+    thumbSrc: 'morgan-min.jpg',
+    desc: `«Morgan’s story» 🧙‍♀✨🐈
+    As opposed to what most people think; witches can be either ill-natured or good-natured.
+    Most witches get banished from the country she lives in because of their evil intentions, but Morgan is quite the opposite!
+    She loves to help people and unite them to create beautiful communities. Because she is talented in many things, people love her and like to be around her.
+    She majored in medicines and rejuvenation, and while it is a strictly forbidden to develop an immortality potion, many people speculate that she used one on her cat Sunny.
+    Sunny is way older than cats are supposed to be! And let’s be honest, if you take a look at this cute cat, you can’t be mad at Morgan for creating such a potion..🐱😘
+    `,
+  },
+  {
     name: 'Autumn',
     thumbSrc: 'autumn-min.jpg',
     desc: `What is beautiful about autumn?

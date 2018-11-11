@@ -104,8 +104,8 @@ const SocialLink = styled(Link).attrs({ target: '_blank' })`
 `;
 
 const MenuBtnWrapper = styled.div`
-  position: fixed;
-  top: 8px;
+  position: absolute;
+  top: 0;
   right: 8px;
   z-index: 100;
 
