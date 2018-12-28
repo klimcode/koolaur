@@ -1,5 +1,40 @@
 export default [
   {
+    name: 'Gumgirl',
+    thumbSrc: 'gumgirl-min.jpg',
+    desc: `A character for the #drawthisinyourstyle challenge
+    `,
+  },
+  {
+    name: 'Magic Witch🐁💫',
+    thumbSrc: 'magic-witch-min.jpg',
+    desc: `If Elio’s family finds out that she hangs out with mice, she will get dishonoured.
+    Her bloodline is filled with owl blood and thus they adopted the name of Owl Witches. So it’s not a secret that being friends with these rodents is highly forbidden. Mice are supposed to be their food, not friends!
+    Yet Elio’s love for her friends is more important to her than the love of filling her stomach. To protect them, she casts a protective spell on her little friends that makes them invisible and soundless to all predators..
+    ✨🕯
+    Hereby I swear,
+    With three candles in the air
+    That those who have evil intents,
+    Will not be able to harm my friends!`,
+  },
+  {
+    name: 'Forest',
+    thumbSrc: 'forest-min.jpg',
+    desc: `These little creatures cuddling with Isha are called the Cori. They have lots of things to talk about and do not know how to stop, to the great despair of those who can actually see and hear them! It is said that they are invisible to adults, but are also rare among children..
+    The fur of the Cori’s are usually grey, but the research that has been done mention that they change colours depending on their environment. In the Water Kingdom Cori's have been spotted with a blue, greenish appearance, and in the scourging realm of Fire Cori's have been spotted with a red fur and black hands and feet!
+    But the true mystery about this story is Isha. There is even less known about her than about these little animals. But those few people that do know her, say that she is an unbelievably bright, wonderful child and is always willing to lend her ears to those who have no other listeners. So, perfect for those adorable Cori’s that never stops talking! :D
+    And did you spot the squirrel on the tree? @viswilly@ 🐿
+    She came to this forest just to meet with Isha. She crossed many borders just to meet with her new friend, which is fascinating because they have never actually met! They only have heard stories about each other, so they were eager to meet each other. And luckily they get along perfectly as if they have known each other for their whole life.
+    The acorn she’s carrying with her is a special acorn from her homeforest, her favourite tree to be exact. They will plant in together in Isha’s forest 🍂
+    `,
+  },
+  {
+    name: 'Folktale week challenge',
+    thumbSrc: 'folktale-week-previos-min.jpg',
+    desc: `This challenge was created to encourage artists from all around the world to share stories and explore character creation and visual storytelling. We want to see your bewitching characters and dreamy scenes!
+    `,
+  },
+  {
     name: 'Morgan\'s working place',
     thumbSrc: 'morgan-working-place-min.jpg',
     desc: `Here is the result of my work with Morgan - an Australian artist @morganschaafsmaart@
