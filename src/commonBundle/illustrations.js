@@ -1,4 +1,40 @@
 export default [
+  // {
+  //   name: '______',
+  //   thumbSrc: '__________',
+  //   originSrc: ['pair-portraits/01.jpg', 'pair-portraits/02.jpg', 'pair-portraits/03.jpg', 'pair-portraits/04.jpg'],
+  //   desc: `___
+  //   `,
+  // },
+  {
+    name: 'Milo Ellersick',
+    thumbSrc: 'milomars-min.jpg',
+    desc: `This is how new stories begin🌱
+    I wanted to do a little sketch yesterday. But while making this, I eventually moved to Photoshop, and there i continued drawing..
+    The drawing was created based on a cool illustration of @milomars_@ for #drawthisinyourstyle challenge,
+    Thanks for the inspiration! 🙌✨
+    `,
+  },
+  {
+    name: 'Zimmy',
+    thumbSrc: 'zimmy-min.jpg',
+    desc: `Custom portrait for Tiffany Lea Zimmermann (zimmylifestyle.com)
+    `,
+  },
+  {
+    name: 'At home',
+    thumbSrc: 'at-home-min.jpg',
+    desc: `I looked through old sketches for inspiration and found a series that I drew in NL🌻🐈
+    These are mostly quick sketches, I adore them because some of my good memories and dreams are within these sketches.
+    So, I decided to implement some of them into full-fledged illustrations, and here is the first result!
+    `,
+  },
+  {
+    name: 'Skygirl',
+    thumbSrc: 'skygirl-min.jpg',
+    desc: `This is my version of @marinevhs@ character for #drawthisinyourstyle challenge and #marinevhs20k congratulations dear!🙌✨
+    `,
+  },
   {
     name: 'Gumgirl',
     thumbSrc: 'gumgirl-min.jpg',
