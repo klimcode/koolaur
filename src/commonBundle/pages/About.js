@@ -1,8 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import { H1, H2 } from '../atoms/H';
-import { P } from '../atoms/P';
-
+import React from "react";
+import styled from "styled-components";
+import { H1, H2 } from "../atoms/H";
+import { P } from "../atoms/P";
 
 const PageAbout = styled.div`
   display: flex;
@@ -11,7 +10,7 @@ const PageAbout = styled.div`
   flex-wrap: wrap;
   padding-bottom: 128px;
 `;
-const Avatar = styled.img.attrs({ alt: '' })`
+const Avatar = styled.img.attrs({ alt: "" })`
   border-radius: 50%;
   margin-top: 64px;
 `;
@@ -24,32 +23,31 @@ const TextAbout = styled.div`
   }
 `;
 
-
 export default () => (
   <PageAbout>
     <Avatar src="/static/media/koolaur-min.jpg" />
     <TextAbout>
-      <H1>
-        Hi there!
-      </H1>
+      <H1>Hi there!</H1>
+      <P>My name is Polina and I&apos;m an illustrator​ based in Amsterdam.</P>
       <P>
-        My name is Polina, I&apos;m an illustrator. <br />
-        Currently reside in Krasnodar, Russia.
+        Nowadays I mostly produce illustrations for books and social media,
+        comics, portraits and character design.
       </P>
       <P>
-        Nowadays I mostly produce children&apos;s illustrations, comics, character design,
-        Illustration via Photoshop and traditional methods such as drawing, painting. My preferred materials are colored pencil, watercolour, ink, but I also love to experiment with new materials.
+        For creating my works I use Adobe Photoshop and traditional methods such
+        as drawing and painting. My preferred materials are coloured pencils,
+        watercolour, gouache, but I also love to experiment!
       </P>
 
-      <H2 gap>
-        Contact
-      </H2>
+      <H2 gap>Contact</H2>
       <P>
         For any questions regarding work or just to say hi, <br />
-        you can drop me a line via email: <a href="mailto:koolaur@gmail.com">koolaur@gmail.com</a>.
+        you can drop me a line via email:{" "}
+        <a href="mailto:koolaur@gmail.com">koolaur@gmail.com</a>.
       </P>
       <P>
-        Thanks for visiting my website,<br />
+        Thanks for visiting my website,
+        <br />
         Let&apos;s do something together!
       </P>
     </TextAbout>
