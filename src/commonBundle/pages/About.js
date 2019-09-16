@@ -34,6 +34,17 @@ export default () => (
         comics, portraits and character design.
       </P>
       <P>
+        Represented by{" "}
+        <a
+          href="http://astound.us/publishing"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Astound agency, UK
+        </a>
+        .
+      </P>
+      <P>
         For creating my works I use Adobe Photoshop and traditional methods such
         as drawing and painting. My preferred materials are coloured pencils,
         watercolour, gouache, but I also love to experiment!
