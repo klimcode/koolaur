@@ -1,20 +1,20 @@
-import React from 'react';
-import styled, { css } from 'styled-components';
-import { Link } from 'react-router-dom';
+import React from "react";
+import styled, { css } from "styled-components";
+import { Link } from "react-router-dom";
 import {
   cssBaseline,
   cssColorPrimary,
   fnInlineGap,
-  minMd, maxMd,
-  fnHide,
-} from '../atoms/css';
+  minMd,
+  maxMd,
+  fnHide
+} from "../atoms/css";
 
-import Hamburger from '../atoms/Hamburger';
-import IconFacebook from '../atoms/icons/IconFacebook';
-import IconInstagram from '../atoms/icons/IconInstagram';
-import IconBehance from '../atoms/icons/IconBehance';
-import IconEtsy from '../atoms/icons/IconEtsy';
-
+import Hamburger from "../atoms/Hamburger";
+import IconFacebook from "../atoms/icons/IconFacebook";
+import IconInstagram from "../atoms/icons/IconInstagram";
+import IconBehance from "../atoms/icons/IconBehance";
+import IconEtsy from "../atoms/icons/IconEtsy";
 
 const cssMenuOpened = css`
   position: fixed;
@@ -30,7 +30,7 @@ const cssMenuOpened = css`
 `;
 const MenuContent = styled.div`
   @media ${maxMd} {
-    ${p => p.isOpened ? cssMenuOpened : 'display:none'}
+    ${p => (p.isOpened ? cssMenuOpened : "display:none")}
   }
 `;
 const ContentWrapper = styled.div`
@@ -72,16 +72,23 @@ const MenuLink = styled(Link)`
   line-height: 64px;
 
   ${cssColorPrimary}
-  ${p => p.active && css`
-    color: ${p => p.theme.colorActive};
-  `};
+  ${p =>
+    p.active &&
+    css`
+      color: ${p => p.theme.colorActive};
+    `};
 
   @media ${minMd} {
     ${cssBaseline}
     ${fnInlineGap()}
   }
 `;
-const SocialLink = styled(Link).attrs({ target: '_blank' })`
+const OuterLink = ({ to, className, children }) => (
+  <a href={to} className={className} target="_blank" rel="noopener noreferrer">
+    {children}
+  </a>
+);
+const SocialLink = styled(OuterLink)`
   display: inline-flex;
   flex-direction: column;
   justify-content: center;
@@ -109,21 +116,20 @@ const MenuBtnWrapper = styled.div`
   right: 8px;
   z-index: 100;
 
-  ${fnHide('md')}
+  ${fnHide("md")}
 `;
 
 export class Menu extends React.Component {
-  state = { isOpened: false }
+  state = { isOpened: false };
 
   handleClick = () => {
     // console.log(this.state);
     this.setState(prevState => ({ isOpened: !prevState.isOpened }));
-  }
+  };
 
   render() {
-    const openedMenuClick = () => (
-      this.state.isOpened ? this.handleClick : (() => {})
-    );
+    const openedMenuClick = () =>
+      this.state.isOpened ? this.handleClick : () => {};
     return (
       <React.Fragment>
         <MenuBtnWrapper>
@@ -134,14 +140,29 @@ export class Menu extends React.Component {
             <List>
               {this.props.pages.map((page, i) => {
                 const isCurrent = this.props.location.pathname === page.path;
-                return <MenuLink to={page.path} active={+isCurrent} key={i}>{page.name}</MenuLink>
+                return (
+                  <MenuLink to={page.path} active={+isCurrent} key={i}>
+                    {page.name}
+                  </MenuLink>
+                );
               })}
             </List>
             <Socials>
-              <SocialLink to="https://www.instagram.com/koolaur/"><IconInstagram /></SocialLink>
-              <SocialLink to="https://www.facebook.com/Koolaur"><IconFacebook /></SocialLink>
-              <SocialLink to="https://www.behance.net/polina_kli3191"><IconBehance /></SocialLink>
-              <SocialLink to="https://www.etsy.com/shop/KoolaurStore" width="50"><IconEtsy /></SocialLink>
+              <SocialLink to="https://www.instagram.com/koolaur/">
+                <IconInstagram />
+              </SocialLink>
+              <SocialLink to="https://www.facebook.com/Koolaur">
+                <IconFacebook />
+              </SocialLink>
+              <SocialLink to="https://www.behance.net/koolaur">
+                <IconBehance />
+              </SocialLink>
+              <SocialLink
+                to="https://www.etsy.com/shop/KoolaurStore"
+                width="50"
+              >
+                <IconEtsy />
+              </SocialLink>
             </Socials>
           </ContentWrapper>
         </MenuContent>
